@@ -97,6 +97,7 @@ button:hover {
   cursor: pointer;
   background-color: #222;
 }
-form h1 {
+form.login h1,
+form.register h1 {
   text-align: center;
 }
