@@ -12,7 +12,7 @@ img {
 
 main {
   padding: 10px;
-  max-width: 600px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
@@ -25,6 +25,7 @@ header {
 header a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
 header .logo {
@@ -39,9 +40,16 @@ header nav {
 
 div.post {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-columns: 1fr;
+
   gap: 20px;
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 700px) {
+  div.post {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
 }
 
 div.post div.texts h2 {
@@ -97,6 +105,7 @@ button {
   color: #fff;
   border-radius: 5px;
   padding: 7px 0;
+  cursor: pointer;
 }
 
 button:hover {
@@ -106,4 +115,54 @@ button:hover {
 form.login h1,
 form.register h1 {
   text-align: center;
+}
+
+div.post-page div.image {
+  max-height: 200px;
+  overflow: hidden;
+  display: flex;
+}
+
+div.post-page div.image img {
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+}
+
+div.post-page h1 {
+  text-align: center;
+  margin: 10px 0 5px;
+}
+
+div.post-page time {
+  text-align: center;
+  display: block;
+  font-size: 0.7em;
+  color: #aaa;
+}
+
+div.post-page .author {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+div.post-page div.content p {
+  line-height: 1.6rem;
+}
+
+div.edit-row {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+a.edit-btn {
+  background-color: #333;
+  display: inline-flex;
+  align-items: center;
+  color: #fff;
+  padding: 15px;
+  text-decoration: none;
+  border-radius: 5px;
 }

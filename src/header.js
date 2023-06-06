@@ -32,6 +32,7 @@ const Header = () => {
       <nav>
         {username && (
           <>
+            <span>hello, {username}</span>
             <Link to="/create">Create new post</Link>
             <a onClick={logout}>Logout</a>
           </>
